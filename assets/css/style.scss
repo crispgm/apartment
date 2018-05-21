@@ -106,6 +106,8 @@ img {
 .bg-photo {
   background-image: url('/apartment/assets/img/work-photo.jpg');
   background-position: center center;
+  margin: 0 auto;
+  max-width: 88rem;
   min-height: 36rem;
 }
 
