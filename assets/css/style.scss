@@ -5,7 +5,7 @@
  * Copyright (c) David Zhang, 2018
  */
 
-$breakpoint: 42rem;
+$breakpoint: 48rem;
 
 $grey-9: #212529;
 $grey-7: #495057;
@@ -90,29 +90,64 @@ img {
   max-width: $breakpoint;
 }
 
-@media (max-width: $breakpoint) {
-  img {
-    max-width: 100%;
-  }
-}
-
 .home {
   text-align: left;
 }
 
 .home-title {
   font-size: 3rem;
+  padding: 3.2rem 0;
 }
 
-.home-photo {
+.home-subtitle {
   font-size: 2rem;
+}
+
+.bg-photo {
+  background-image: url('/apartment/assets/img/work-photo.jpg');
+  background-position: center center;
+  min-height: 36rem;
+}
+
+.home-intro {
+  font-size: 2rem;
+  padding: 4.8rem 0;
+}
+
+.home-action {
+  font-size: 1.4rem;
+  padding: 2.4rem 0;
 }
 
 .home-menu {
   display: flex;
-  font-size: 1.6rem;
+  font-size: 1rem;
 
   .home-menu-item {
+    padding-left: .8rem;
     width: 33%;
+
+    h3 {
+      font-weight: normal;
+      font-size: 1.4rem;
+    }
+  }
+}
+
+.footer {
+  margin: 2.4rem;
+}
+
+@media (max-width: $breakpoint) {
+  img {
+    max-width: 100%;
+  }
+
+  .home-menu {
+    display: block;
+
+    .home-menu-item {
+      width: 100%;
+    }
   }
 }
