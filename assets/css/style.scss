@@ -5,7 +5,7 @@
  * Copyright (c) David Zhang, 2018
  */
 
-$breakpoint: 48rem;
+$breakpoint: 54rem;
 
 $grey-9: #212529;
 $grey-7: #495057;
@@ -107,7 +107,7 @@ img {
   background-image: url('/apartment/assets/img/work-photo.jpg');
   background-position: center center;
   margin: 0 auto;
-  max-width: 88rem;
+  max-width: 78rem;
   min-height: 36rem;
 }
 
@@ -116,18 +116,13 @@ img {
   padding: 4.8rem 0;
 }
 
-.home-action {
-  font-size: 1.4rem;
-  padding: 2.4rem 0;
-}
-
 .home-menu {
   display: flex;
   font-size: 1rem;
 
   .home-menu-item {
     padding-left: .8rem;
-    width: 33%;
+    width: 25%;
 
     h3 {
       font-weight: normal;

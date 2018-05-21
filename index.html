@@ -21,17 +21,6 @@ layout: none
         <div class="content" id="main-content">
           <div class="content-wrapper">
             <div class="home">
-              <div class="home-title">
-                <a href="{{ site.baseurl }}/">/yc/home</a>
-              </div>
-              <div class="home-intro">
-                <div>Apartment of Yeyeko &amp; Crisp</div>
-                <div>@Chaoyang Park</div>
-              </div>
-              <div class="home-action">
-                <div>Making a visit</div>
-                <div>Get Wi-Fi</div>
-              </div>
             </div>
           </div>
         </div>
@@ -42,20 +31,30 @@ layout: none
         <div class="home">
           <div class="home-menu">
             <div class="home-menu-item">
+              <h3>/yc/home</h3>
+              <p>
+                <div>Apartment of Yeyeko &amp; Crisp</div>
+                <div><a href="http://f.amap.com/3QBld_0D34QlX" target="_blank">@Chaoyang Park</a></div>
+                <div><a href="#" onclick="handleVisit()">Make a Visit</a></div>
+                <div><a href="#" onclick="handleWiFi()">Get Visitor's Wi-Fi</a></div>
+              </p>
+            </div>
+            <div class="home-menu-item">
               <h3>Environment</h3>
               <p>
-                <div><a href="http://www.airburg.cn/">Airburg</a> Fresh Air System</div>
+                <div>Airburg Fresh Air System</div>
                 <div>Air Conditioner</div>
                 <div>Water Purifier</div>
                 <div>Water Softening Plant</div>
+                <div>MUJI Aroma Diffuser</div>
               </p>
             </div>
             <div class="home-menu-item">
               <h3>Entertainment</h3>
               <p>
+                <div>Cosy Sofas</div>
                 <div>SONY TV</div>
-                <div>Google Chromecast</div>
-                <div>iQiyi 电视果</div>
+                <div>Google Chromecast/电视果</div>
                 <div>Sonos PLAY:1</div>
                 <div>BOSE Wave Music System</div>
               </p>
@@ -63,7 +62,8 @@ layout: none
             <div class="home-menu-item">
               <h3>Productivity</h3>
               <p>
-                <div>100M China Unicom network</div>
+                <div>Comfortable Workshop</div>
+                <div>100M Fast Network</div>
                 <div>ASUS AC68U Router</div>
               </p>
             </div>
@@ -71,8 +71,17 @@ layout: none
         </div>
       </div>
       <footer class="footer">
-        Crisp <i class="fa fa-heart-o"></i> Yeyeko, 2018.
+        <a href="https://crispgm.com">Crisp</a> <i class="fa fa-heart-o"></i> <a href="https://yeyeko.gift">Yeyeko</a>, 2018.
       </footer>
     </div>
   </body>
+  <script type="text/javascript">
+    function handleVisit() {
+      alert('Feel free to contact me, in case you know us. :)');
+    }
+
+    function handleWiFi() {
+      alert('SSID: ycguest');
+    }
+  </script>
 </html>
