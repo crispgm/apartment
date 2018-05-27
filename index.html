@@ -31,9 +31,9 @@ permalink: index.html
               <h3>/yc/home</h3>
               <p>
                 <div>Apartment of Yeyeko &amp; Crisp</div>
-                <div><a href="http://f.amap.com/3QBld_0D34QlX" target="_blank">@Chaoyang Park</a></div>
-                <div><a href="#" onclick="handleVisit()">Make a Visit</a></div>
-                <div><a href="#" onclick="handleWiFi()">Get Visitor's Wi-Fi</a></div>
+                <div><a href="{{ site.baseurl }}/our-values.html">Our Values</a></div>
+                <div><a href="{{ site.baseurl }}/album.html">Album</a></div>
+                <div><a href="{{ site.baseurl }}/for-visitors.html">For Visitors</a></div>
               </p>
             </div>
             <div class="home-menu-item">
@@ -67,18 +67,7 @@ permalink: index.html
           </div>
         </div>
       </div>
-      <footer class="footer">
-        <a href="https://crispgm.com">Crisp</a> <i class="fa fa-heart-o"></i> <a href="https://yeyeko.gift">Yeyeko</a>, 2018.
-      </footer>
+      {% include footer.html %}
     </div>
   </body>
-  <script type="text/javascript">
-    function handleVisit() {
-      alert('Feel free to contact me, in case you know us. :)');
-    }
-
-    function handleWiFi() {
-      alert('SSID: YCGuest');
-    }
-  </script>
 </html>
