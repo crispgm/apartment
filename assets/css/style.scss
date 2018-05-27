@@ -66,6 +66,7 @@ a {
 
 .content {
   text-align: center;
+  text-overflow: ellipsis;
   width: 100%;
 }
 
@@ -88,6 +89,23 @@ a {
 img {
   border: 0;
   max-width: $breakpoint;
+}
+
+.nav-back {
+  text-align: left;
+  line-height: 1.5;
+  font-style: italic;
+}
+
+.album {
+  text-align: center;
+  margin: 0 auto;
+  width: 30rem;
+}
+
+.page-title {
+  font-size: 2.4rem;
+  padding: 2rem;
 }
 
 .home {
@@ -118,6 +136,7 @@ img {
 
 .home-menu {
   display: flex;
+  flex-wrap: wrap;
   font-size: 1rem;
 
   .home-menu-item {
