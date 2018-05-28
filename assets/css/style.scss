@@ -100,7 +100,19 @@ img {
 .album {
   text-align: center;
   margin: 0 auto;
-  width: 30rem;
+  display: flex;
+  flex-wrap: wrap;
+
+  .album-col {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+
+    .album-photo {
+      width: 100%;
+      max-height: 100%;
+    }
+  }
 }
 
 .page-title {
