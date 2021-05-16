@@ -1,0 +1,75 @@
+---
+layout: default
+title: Circuit Breaker
+permalink: /circuit-breaker/
+---
+
+<div class="wide-wrapper">
+  {% include nav-back.html %}
+  <div class="page-title">
+  {{ page.title }}
+  </div>
+  <div class="wide-page">
+    <div class="circuit-breaker">
+      <div class="circuit-switch circuit-switch-2u">
+        <h3>Power ON/OFF</h3>
+      </div>
+      <div class="circuit-switch circuit-switch-1u">
+        <h3>Lights</h3>
+      </div>
+      <div class="circuit-switch circuit-switch-2u">
+        <h3>Livingroom</h3>
+      </div>
+      <div class="circuit-switch circuit-switch-2u">
+        <h3>Kitchen</h3>
+      </div>
+      <div class="circuit-switch circuit-switch-2u">
+        <h3>Washroom</h3>
+      </div>
+      <div class="circuit-switch circuit-switch-2u">
+        <h3>ELV Box</h3>
+      </div>
+      <div class="circuit-switch circuit-switch-1u">
+        <h3>AC<br />Home Office</h3>
+      </div>
+      <div class="circuit-switch circuit-switch-1u">
+        <h3>AC<br />Livingroom</h3>
+      </div>
+      <div class="circuit-switch circuit-switch-1u">
+        <h3>AC<br />Storeroom</h3>
+      </div>
+      <div class="circuit-switch circuit-switch-1u">
+        <h3>AC<br />Bedroom</h3>
+      </div>
+    </div>
+  </div>
+  <div class="page-content">
+    <p class="notes">-</p>
+  </div>
+  {% include footer.html %}
+  <script type="text/javascript">
+    const data = [
+      ["6㎡", "63A"],
+      ["2.5㎡", "16A"],
+      ["2.5㎡", "20A", "residual-current circuit breaker (RCCB) and grouding"],
+      ["4㎡", "16A", "residual-current circuit breaker (RCCB) and grouding"],
+      ["2.5㎡", "20A", "residual-current circuit breaker (RCCB) and grouding"],
+      ["2.5㎡", "20A", "residual-current circuit breaker (RCCB) and grouding"],
+      ["4㎡", "20A", "residual-current circuit breaker (RCCB) and grouding"],
+      ["4㎡", "20A", "residual-current circuit breaker (RCCB) and grouding"],
+      ["4㎡", "20A", "residual-current circuit breaker (RCCB) and grouding"],
+      ["4㎡", "20A", "residual-current circuit breaker (RCCB) and grouding"],
+    ];
+    const targets = document.querySelectorAll(".circuit-switch");
+    for (let i in targets) {
+      const item = targets[i];
+      item.setAttribute("data-description", data[i].join(", "));
+      item.addEventListener("mouseover", function() {
+        document.querySelector(".notes").textContent = item.getAttribute("data-description");
+      }, false);
+      item.addEventListener("mouseout", function() {
+        document.querySelector(".notes").textContent = "-";
+      }, false);
+    }
+  </script>
+</div>

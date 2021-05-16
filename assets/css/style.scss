@@ -2,7 +2,7 @@
 ---
 /*
  * Theme of Crisp Apartment
- * Copyright (c) David Zhang, 2018
+ * Copyright (c) David Zhang, 2021
  */
 
 $breakpoint: 54rem;
@@ -64,6 +64,16 @@ a {
   width: $breakpoint;
 }
 
+.wide-wrapper {
+  margin: 0 auto;
+  padding: 0;
+}
+
+.wide-page {
+  display: flex;
+  justify-content: center;
+}
+
 .content {
   text-align: center;
   text-overflow: ellipsis;
@@ -118,6 +128,49 @@ img {
       width: 100%;
     }
   }
+}
+
+.circuit-breaker {
+  margin: 1.6rem auto 0;
+  display: flex;
+  flex-wrap: wrap;
+
+  .circuit-switch {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    border-left: 1px solid $grey-7;
+    margin: 0;
+    padding: .8rem 0 0;
+
+    &:first-of-type {
+      border-left: 0;
+    }
+
+    h3 {
+      font-weight: normal;
+      font-size: 1rem;
+      height: 4rem;
+    }
+
+    &:hover {
+      color: $grey-3;
+      background-color: $grey-7;
+    }
+  }
+
+  .circuit-switch-1u {
+    width: 6rem;
+  }
+
+  .circuit-switch-2u {
+    width: 12rem;
+  }
+}
+
+.notes {
+  padding: 1.6rem 0 0;
 }
 
 .page-title {
