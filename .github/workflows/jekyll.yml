@@ -1,20 +1,37 @@
 name: Jekyll site CI
 
-on:
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+on: push
 
 jobs:
-  build:
-
+  publish:
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v2
-    - name: Build the site in the jekyll/builder container
-      run: |
-        docker run \
-        -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
-        jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future"
+      - uses: actions/checkout@v2
+        with:
+          path: main
+          fetch-depth: 1
+      - uses: actions/checkout@v2
+        with:
+          ref: gh-pages
+          path: main/gh-pages
+      - name: Set up Ruby 2.6
+        uses: actions/setup-ruby@v1
+        with:
+          ruby-version: 2.6.x
+      - name: 'Update Rubygems & Bundler'
+        run: 'gem update --system --no-document && gem update bundler --no-document'
+      - name: 'Install Bundler 2'
+        run: 'gem install bundler -v "2.0.1" --force'
+      - run: |
+          cd main
+          bundle exec jekyll build --destination=./gh-pages/
+      - run: |
+          cd main/gh-pages
+          git config --global user.name 'crispbot'
+          git config --global user.email 'crispbot@users.noreply.github.com'
+          git add .
+          git commit --allow-empty -m "Auto published at $(date +%Y%m%d-%H:%M:%S)"
+          git remote set-url --push origin https://crispgm:${{ secrets.ACCESS_TOKEN }}@github.com/crispgm/apartment
+          git push origin gh-pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
