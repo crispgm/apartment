@@ -19,11 +19,12 @@ jobs:
         with:
           ruby-version: 2.6.x
       - name: 'Update Rubygems & Bundler'
-        run: 'gem update --system --no-document && gem update bundler --no-document'
-      - name: 'Install Bundler 2'
-        run: 'gem install bundler -v "2.0.1" --force'
+        run: |
+          gem update --system --no-document && gem update bundler --no-document
+          gem install bundler -v "2.0.1" --force
       - run: |
           cd main
+          bundle install
           bundle exec jekyll build --destination=./gh-pages/
       - run: |
           cd main/gh-pages
