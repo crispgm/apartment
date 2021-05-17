@@ -1,0 +1,82 @@
+/* Theme of Crisp Apartment Copyright (c) David Zhang, 2021 */
+* { box-sizing: border-box; }
+
+html { font-size: 16px; height: 100%; width: 100%; }
+
+@media (max-width: 54rem) { html { font-size: 14px; } }
+
+body { background-color: #fff; color: #212529; font-family: "Crimson Text", Helvetica, Arial, "source-han-sans-simplified-c", "Hiragino Sans GB", "Microsoft Yahei", sans-serif; font-size: 1rem; -moz-osx-font-smoothing: grayscale; -webkit-font-smoothing: antialiased; height: 100%; margin: 0; padding: 0; text-align: center; word-wrap: break-word; }
+
+body ::selection { background-color: #dee2e6; }
+
+a { color: #495057; font-weight: 400; text-decoration: none; }
+
+a:hover { text-decoration: underline; }
+
+.wrapper { margin: 0 auto; padding: 0; width: 54rem; }
+
+.wide-wrapper { margin: 0 auto; padding: 0; }
+
+.wide-page { display: flex; justify-content: center; }
+
+.content { text-align: center; text-overflow: ellipsis; width: 100%; }
+
+.content-wrapper { padding: 1.2rem 0; }
+
+@media (max-width: 54rem) { .wrapper { display: block; width: 100%; } .content-wrapper { padding: .4rem; width: 100%; } }
+
+img { border: 0; max-width: 54rem; }
+
+.nav-back { text-align: left; line-height: 1.5; font-style: italic; margin: .4rem 0 0 .4rem; }
+
+.album { text-align: center; margin: 0 auto; display: flex; flex-wrap: wrap; }
+
+.album .album-col { display: flex; flex-wrap: wrap; width: 50%; padding: 0 0 0 1rem; }
+
+.album .album-col:first-of-type { padding: 0; }
+
+.album .album-col .album-photo { width: 100%; }
+
+.circuit-breaker { margin: 1.6rem auto 0; display: flex; flex-wrap: wrap; }
+
+.circuit-breaker .circuit-switch { display: flex; flex-wrap: wrap; justify-content: center; text-align: center; border-left: 1px solid #495057; margin: 0; padding: .8rem 0 0; }
+
+.circuit-breaker .circuit-switch:first-of-type { border-left: 0; }
+
+.circuit-breaker .circuit-switch h3 { font-weight: normal; font-size: 1rem; height: 4rem; }
+
+.circuit-breaker .circuit-switch:hover { color: #dee2e6; background-color: #495057; }
+
+.circuit-breaker .circuit-switch-1u { width: 6rem; }
+
+.circuit-breaker .circuit-switch-2u { width: 12rem; }
+
+.notes { padding: 1.6rem 0 0; }
+
+.page-title { font-size: 2.4rem; padding: 2rem; }
+
+.home { text-align: left; }
+
+.home-title { font-size: 3rem; padding: 3.2rem 0; }
+
+.home-subtitle { font-size: 2rem; }
+
+.bg-photo { background-image: url("/apartment/assets/img/work-photo.jpg"); background-position: center center; margin: 0 auto; max-width: 78rem; min-height: 36rem; }
+
+.home-intro { font-size: 2rem; padding: 4.8rem 0; }
+
+.home-menu { display: flex; flex-wrap: wrap; font-size: 1rem; }
+
+.home-menu .home-menu-item { line-height: 1.5; padding-left: .8rem; width: 25%; }
+
+.home-menu .home-menu-item h3 { font-weight: normal; font-size: 1.4rem; }
+
+.index-menu-item { font-size: 1.2rem; line-height: 1.5; margin: 1.8rem 0; padding-left: .8rem; width: 20%; }
+
+.index-main { text-shadow: 0 0 1px #495057; }
+
+.footer { margin: 2.4rem; }
+
+@media (max-width: 54rem) { img { max-width: 100%; } .bg-photo { background-image: url("/apartment/assets/img/work-photo.jpg"); background-position: center center; background-size: cover; margin: 0; min-height: 18rem; } .home-menu { display: block; } .home-menu .home-menu-item { width: 100%; } .home-menu .index-menu-item { width: 100%; margin: .8rem 0 0; padding: 0 0 0 .8rem; } .album { display: block; } .album .album-col { display: block; width: 100%; padding: 0; } .album .album-col .album-photo { padding: 0 1rem; width: 100%; } }
+
+/*# sourceMappingURL=style.css.map */
